@@ -1,0 +1,18 @@
+{
+  "name": "omninotice-e2e",
+  "version": "1.0.0",
+  "description": "E2E tests for OmniNotice FR-09 (Sinora → Doocot → Letopis)",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "mocks": "node scripts/start-mocks.js",
+    "test:all": "npm run mocks & playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "express": "^4.21.0",
+    "cors": "^2.8.5"
+  }
+}

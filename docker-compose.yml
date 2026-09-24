@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  sinora-mock:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: node mocks/sinora/server.js
+    ports:
+      - '4001:4001'
+    environment:
+      PORT: 4001
+
+  doocot-mock:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: node mocks/doocot/server.js
+    ports:
+      - '4002:4002'
+    environment:
+      PORT: 4002
+
+  letopis-mock:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: node mocks/letopis/server.js
+    ports:
+      - '4003:4003'
+    environment:
+      PORT: 4003
+      LETOPIS_USER: omninotice
+      LETOPIS_PASS: secret
