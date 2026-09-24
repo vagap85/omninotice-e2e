@@ -26,4 +26,4 @@ npm install
 npx playwright install chromium
 npm test
 
-## HTML - Отсчёт https://yadi.sk/d/3Si0pfGpVOSxyQ
+## HTML - Отчёт https://yadi.sk/d/3Si0pfGpVOSxyQ
