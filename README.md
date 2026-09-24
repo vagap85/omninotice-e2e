@@ -1,5 +1,9 @@
 # OmniNotice E2E — FR-09
 
+[![E2E Tests](https://github.com/vagap85/omninotice-e2e/actions/workflows/e2e.yml/badge.svg)](https://github.com/vagap85/omninotice-e2e/actions/workflows/e2e.yml)
+
+# OmniNotice E2E — FR-09
+
 E2E-тесты для сценария **«Приём события от Синоры и доставка уведомления в Doocot, с записью лога в сервис Журнал (Летопись)»**.
 
 Пока SSH-секреты для DEV-стенда не получены (SUPPORT-210), тесты работают **на заглушках (моках)** — три Express-сервера эмулируют внешние сервисы.
