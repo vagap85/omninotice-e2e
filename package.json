@@ -4,15 +4,19 @@
   "description": "E2E tests for OmniNotice FR-09 (Sinora → Doocot → Letopis)",
   "type": "module",
   "scripts": {
-    "test": "playwright test",
+    "test": "cross-env TARGET=mocks playwright test --project=mocks",
+    "test:mocks": "cross-env TARGET=mocks playwright test --project=mocks",
+    "test:dev": "cross-env TARGET=dev playwright test --project=dev",
+    "test:all": "cross-env TARGET=mocks playwright test --project=mocks && cross-env TARGET=dev playwright test --project=dev",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
-    "mocks": "node scripts/start-mocks.js",
-    "test:all": "npm run mocks & playwright test"
+    "mocks": "node scripts/start-mocks.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.48.0",
-    "express": "^4.21.0",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^18.0.8",
+    "express": "^4.21.0"
   }
 }
